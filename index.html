@@ -7,44 +7,99 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
 <style>
   body {
-    background-color: black; /* Set the background color to black */
+    background-color: black;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Make the body fill the viewport height */
-    margin: 0; /* Remove default body margin */
-    font-family: 'Comic Neue', cursive; /* Set the font family to Comic Neue */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+    overflow: hidden;
   }
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .rainbow-text {
-    font-size: 12em; /* You can adjust the size as needed */
-    font-weight: bold; /* Optional: Makes the text bold */
-    animation: rainbow 5s infinite; /* Apply rainbow animation */
-    text-align: center; /* Optional: Centers the text horizontally */
-    -webkit-background-clip: text; /* Clip text to allow background to show through */
-    color: transparent; /* Make the text transparent */
+    font-size: 12em;
+    font-weight: bold;
+    animation: rainbow 12s infinite;
+    text-align: center;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   @keyframes rainbow {
-    0% { color: #ff0000; } /* Red */
-    20% { color: #ff7f00; } /* Orange */
-    40% { color: #ffff00; } /* Yellow */
-    60% { color: #00ff00; } /* Green */
-    80% { color: #0000ff; } /* Blue */
-    100% { color: #8b00ff; } /* Indigo */
-    110% { color: #ff0000; } /* Red */
-    120% { color: #ff7f00; } /* Orange */
-    140% { color: #ffff00; } /* Yellow */
-    160% { color: #00ff00; } /* Green */
-    180% { color: #0000ff; } /* Blue */
-    200% { color: #8b00ff; } /* Indigo */
+    0% { color: #ff0000; }
+    16.67% { color: #ff7f00; }
+    33.33% { color: #ffff00; }
+    50% { color: #00ff00; }
+    66.67% { color: #0000ff; }
+    83.33% { color: #8b00ff; }
+    100% { color: #ff0000; }
+  }
+
+  /* Glowing effect */
+  .glow {
+    animation: glowing 12s ease-in-out infinite;
+  }
+
+  @keyframes glowing {
+    0% { text-shadow: 0 0 10px #ff0000; }
+    16.67% { text-shadow: 0 0 10px #ff7f00; }
+    33.33% { text-shadow: 0 0 10px #ffff00; }
+    50% { text-shadow: 0 0 10px #00ff00; }
+    66.67% { text-shadow: 0 0 10px #0000ff; }
+    83.33% { text-shadow: 0 0 10px #8b00ff; }
+    100% { text-shadow: 0 0 10px #ff0000; }
+  }
+
+  /* Adjust size of icons */
+  .icon {
+    width: 50px; /* Fixed width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin: 10px;
+  }
+
+  /* Make icons clickable */
+  .icon-link {
+    display: inline-block; /* Ensure anchor takes only necessary space */
+    text-decoration: none;
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.5em;
+  }
+
+  .glowing-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .glowing-links a {
+    margin: 0 10px;
+    animation: glowing 12s ease-in-out infinite;
   }
 </style>
 </head>
 <body>
 
-<div class="rainbow-text">
-  Wagwizzy
+<div class="container">
+  <div class="rainbow-text">
+    Wagwizzy
+  </div>
+
+  <div class="glowing-links">
+    <a href="https://www.youtube.com/@bozoteko" class="glow icon-link">YouTube</a>
+    <a href="https://www.twitch.tv/teko5m" class="glow icon-link">Twitch</a>
+    <a href="https://www.discord.com/users/978886625562095617" class="glow icon-link">Discord</a>
+    <a href="https://www.github.com/bozoteko" class="glow icon-link">GitHub</a>
+  </div>
 </div>
 
 </body>
