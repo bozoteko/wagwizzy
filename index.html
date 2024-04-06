@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wagwizzy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+<style>
+  body {
+    background-color: black; /* Set the background color to black */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Make the body fill the viewport height */
+    margin: 0; /* Remove default body margin */
+    font-family: 'Comic Neue', cursive; /* Set the font family to Comic Neue */
+  }
+  
+  .rainbow-text {
+    font-size: 12em; /* You can adjust the size as needed */
+    font-weight: bold; /* Optional: Makes the text bold */
+    animation: rainbow 5s infinite; /* Apply rainbow animation */
+    text-align: center; /* Optional: Centers the text horizontally */
+    -webkit-background-clip: text; /* Clip text to allow background to show through */
+    color: transparent; /* Make the text transparent */
+  }
+
+  @keyframes rainbow {
+    0% { color: #ff0000; } /* Red */
+    20% { color: #ff7f00; } /* Orange */
+    40% { color: #ffff00; } /* Yellow */
+    60% { color: #00ff00; } /* Green */
+    80% { color: #0000ff; } /* Blue */
+    100% { color: #8b00ff; } /* Indigo */
+  }
+</style>
+</head>
+<body>
+
+<div class="rainbow-text">
+  Wagwizzy
+</div>
+
+</body>
+</html>
