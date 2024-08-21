@@ -43,7 +43,6 @@
     100% { color: #ff0000; }
   }
 
-  /* Glowing effect */
   .glow {
     animation: glowing 12s ease-in-out infinite;
   }
@@ -58,16 +57,14 @@
     100% { text-shadow: 0 0 10px #ff0000; }
   }
 
-  /* Adjust size of icons */
   .icon {
-    width: 50px; /* Fixed width */
-    height: auto; /* Auto height to maintain aspect ratio */
+    width: 50px; 
+    height: auto; 
     margin: 10px;
   }
 
-  /* Make icons clickable */
   .icon-link {
-    display: inline-block; /* Ensure anchor takes only necessary space */
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-family: 'Comic Neue', cursive;
@@ -84,6 +81,30 @@
   .glowing-links a {
     margin: 0 10px;
     animation: glowing 12s ease-in-out infinite;
+  }
+
+  /* Media query for mobile devices */
+  @media (max-width: 600px) {
+    .rainbow-text {
+      font-size: 6em; /* Reduce the size of the Wagwizzy text */
+    }
+
+    .icon-link {
+      font-size: 1.2em; /* Reduce the size of the links */
+    }
+
+    .icon {
+      width: 30px; /* Reduce the size of the icons */
+    }
+
+    .glowing-links {
+      flex-direction: column; /* Stack links vertically on small screens */
+      align-items: flex-start; /* Align the links to the start of the flex container */
+    }
+
+    .glowing-links a {
+      margin: 10px 0; /* Adjust the margin between links */
+    }
   }
 </style>
 </head>
