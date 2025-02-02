@@ -1,9 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://archive.org/download/myfile/myfile.zip">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download and Close</title>
+    <script type="text/javascript">
+        // Function to trigger the download and close the tab
+        function startDownloadAndClose() {
+            // Direct download link for the file
+            var downloadLink = "https://archive.org/download/myfile/myfile.zip"; // Replace with your actual download link
+
+            // Create an invisible link element
+            var link = document.createElement("a");
+            link.href = downloadLink;
+            link.download = ""; // Optional: specify a filename if needed
+
+            // Append the link to the body, click it to start the download
+            document.body.appendChild(link);
+            link.click();
+
+            // Remove the link element after the click
+            document.body.removeChild(link);
+
+            // Close the tab after the download starts
+            window.close();
+        }
+
+        // Call the function when the page loads
+        window.onload = startDownloadAndClose;
+    </script>
 </head>
 <body>
-    <p>If the download doesn’t start, <a href="https://archive.org/download/myfile/myfile.zip">click here</a>.</p>
+    <p>If the download doesn't start automatically, <a href="https://archive.org/download/myfile/myfile.zip">click here</a>.</p>
 </body>
 </html>
