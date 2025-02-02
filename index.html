@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -69,6 +68,7 @@
     color: white;
     font-family: 'Comic Neue', cursive;
     font-size: 1.5em;
+    text-align: center;
   }
 
   .glowing-links {
@@ -76,11 +76,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Ensures that the text can wrap on smaller screens */
+    width: 100%;
   }
 
-  .glowing-links a {
-    margin: 0 10px;
-    animation: glowing 12s ease-in-out infinite;
+  .links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Reduced width to make items closer together */
+    max-width: 1000px; /* Optional: Limit the width to prevent overflow */
+  }
+
+  .links-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%; /* Reduced width of each section */
+    text-align: center;
+  }
+
+  .version-text {
+    font-size: 0.9em; /* Slightly smaller version text */
+    color: white;
+    margin-top: 3px;
+    white-space: nowrap;
   }
 
   /* Media query for mobile devices */
@@ -97,13 +116,14 @@
       width: 30px; /* Reduce the size of the icons */
     }
 
-    .glowing-links {
-      flex-direction: column; /* Stack links vertically on small screens */
-      align-items: flex-start; /* Align the links to the start of the flex container */
+    .links-container {
+      flex-direction: column;
+      align-items: center; /* Center the links on small screens */
     }
 
-    .glowing-links a {
-      margin: 10px 0; /* Adjust the margin between links */
+    .links-container div {
+      width: 80%; /* Make each section take up more space on smaller screens */
+      margin-bottom: 20px; /* Adjust margin between items */
     }
   }
 </style>
@@ -116,10 +136,28 @@
   </div>
 
   <div class="glowing-links">
-    <a href="https://www.youtube.com/@bozoteko" class="glow icon-link" target="_blank">YouTube</a>
-<a href="https://www.bozoteko.cc/nve" class="glow icon-link" target="_blank"><b>Latest NVE</b></a>
-<a href="https://www.bozoteko.cc/quantv" class="glow icon-link" target="_blank"><b>Latest QuantV</b></a>
-    <a href="https://discord.gg/FPCFjc8m2U" class="glow icon-link" target="_blank">Discord</a>
+    <div class="links-container">
+      <!-- YouTube on the left -->
+      <div>
+        <a href="https://www.youtube.com/@bozoteko" class="glow icon-link" target="_blank">YouTube</a>
+      </div>
+
+      <!-- NVE and QuantV in the center -->
+      <div>
+        <a href="https://www.bozoteko.cc/nve" class="glow icon-link" target="_blank"><b>Latest NVE</b></a>
+        <div class="version-text">v18-12-24</div> <!-- Version for NVE -->
+      </div>
+
+      <div>
+        <a href="https://www.bozoteko.cc/quantv" class="glow icon-link" target="_blank"><b>Latest QuantV</b></a>
+        <div class="version-text">v2-1-25</div> <!-- Version for QuantV -->
+      </div>
+
+      <!-- Discord on the right -->
+      <div>
+        <a href="https://discord.gg/FPCFjc8m2U" class="glow icon-link" target="_blank">Discord</a>
+      </div>
+    </div>
   </div>
 </div>
 
