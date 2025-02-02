@@ -7,8 +7,8 @@
     <script type="text/javascript">
         // Function to trigger the download and close the tab
         function startDownloadAndClose() {
-            // Direct download link for the file
-            var downloadLink = "https://archive.org/download/myfile/myfile.zip"; // Replace with your actual download link
+            // Direct download link for the file on Mediafire
+            var downloadLink = "https://download2289.mediafire.com/wizg1xxzhq5g2UD9FeLilkZgqGND5o_r3X1mtWLKeN-n1Xn7TK8FypL0ENIWSOdc2crP4oYvqf-0ojaxE_JLweLTG3dqoh6GMc8BD6XyM8IqSzzLkP0blmJYqZxO9OG8peTmqsfgyeyxEWJw8vCsvZKUXllFPzGQC8m1oxa1INyioQ/uqbeoc3exobk4dz/QuantV+FiveM+2025-1-2.zip";
 
             // Create an invisible link element
             var link = document.createElement("a");
@@ -22,8 +22,10 @@
             // Remove the link element after the click
             document.body.removeChild(link);
 
-            // Close the tab after the download starts
-            window.close();
+            // Wait for a small delay before closing the tab (2 seconds)
+            setTimeout(function() {
+                window.close();
+            }, 2000); // 2000 milliseconds = 2 seconds delay
         }
 
         // Call the function when the page loads
@@ -31,6 +33,6 @@
     </script>
 </head>
 <body>
-    <p>If the download doesn't start automatically, <a href="https://archive.org/download/myfile/myfile.zip">click here</a>.</p>
+    <p>If the download doesn't start automatically, <a href="https://download2289.mediafire.com/wizg1xxzhq5g2UD9FeLilkZgqGND5o_r3X1mtWLKeN-n1Xn7TK8FypL0ENIWSOdc2crP4oYvqf-0ojaxE_JLweLTG3dqoh6GMc8BD6XyM8IqSzzLkP0blmJYqZxO9OG8peTmqsfgyeyxEWJw8vCsvZKUXllFPzGQC8m1oxa1INyioQ/uqbeoc3exobk4dz/QuantV+FiveM+2025-1-2.zip">click here</a>.</p>
 </body>
 </html>
