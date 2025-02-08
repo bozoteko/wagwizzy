@@ -56,12 +56,6 @@
     100% { text-shadow: 0 0 10px #ff0000; }
   }
 
-  .icon {
-    width: 50px; 
-    height: auto; 
-    margin: 10px;
-  }
-
   .icon-link {
     display: inline-block;
     text-decoration: none;
@@ -71,11 +65,11 @@
     text-align: center;
   }
 
-    .gofile-link {
+  .gofile-link {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    text-shadow: 0 0 10px white; /* Glowing effect */
+    text-shadow: 0 0 10px white;
   }
 
   .glowing-links {
@@ -83,54 +77,55 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Ensures that the text can wrap on smaller screens */
+    flex-wrap: wrap;
     width: 100%;
   }
 
   .links-container {
     display: flex;
     justify-content: space-between;
-    width: 80%; /* Reduced width to make items closer together */
-    max-width: 1000px; /* Optional: Limit the width to prevent overflow */
+    width: 80%;
+    max-width: 1000px;
   }
 
   .links-container div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25%; /* Reduced width of each section */
+    width: 25%;
     text-align: center;
   }
 
   .version-text {
-    font-size: 0.9em; /* Slightly smaller version text */
+    font-size: 0.9em;
     color: white;
     margin-top: 3px;
     white-space: nowrap;
   }
 
+  .useful-container {
+    margin-top: 40px;
+    text-align: center;
+  }
+
   /* Media query for mobile devices */
   @media (max-width: 600px) {
     .rainbow-text {
-      font-size: 4.5em; /* Further reduce the size of the Wagwizzy text */
+      font-size: 4.5em;
     }
 
     .icon-link {
-      font-size: 1.2em; /* Reduce the size of the links */
-    }
-
-    .icon {
-      width: 30px; /* Reduce the size of the icons */
+      font-size: 1.2em;
     }
 
     .links-container {
       flex-direction: column;
-      align-items: center; /* Center the links on small screens */
+      align-items: center;
     }
 
     .links-container div {
-      width: 80%; /* Make each section take up more space on smaller screens */
-      margin-bottom: 20px; /* Adjust margin between items */
+      width: 80%;
+      margin-bottom: 20px;
     }
   }
 </style>
@@ -138,39 +133,35 @@
 <body>
 
 <div class="container">
-  <div class="rainbow-text">
-    Wagwizzy
-  </div>
+  <div class="rainbow-text">Wagwizzy</div>
 
   <div class="glowing-links">
     <div class="links-container">
-      <!-- YouTube on the left -->
-      <div>
-        <a href="https://www.youtube.com/@bozoteko" class="glow icon-link" target="_blank">YouTube</a>
-      </div>
-
-      <!-- NVE and QuantV in the center -->
+      <div><a href="https://www.youtube.com/@bozoteko" class="glow icon-link" target="_blank">YouTube</a></div>
       <div>
         <a href="https://www.bozoteko.cc/nve/index.html" class="glow icon-link" target="_blank"><b>NVE Jan</b></a>
-<a href="https://www.mediafire.com/file/cyck9v2d0po2rcb/NVE_-_FiveM_Package-001.zip/file" target="_blank" class="version-text" style="color: white; font-weight: bold; text-shadow: 0 0 10px white; text-decoration: underline;">Mediafire</a>
-<a href="https://vag.gg/threads/nve-naturalvision-evolved-january-2025-fivem.30247/" target="_blank" class="version-text" style="color: white; font-weight: bold; text-shadow: 0 0 10px white; text-decoration: underline;">Vag.gg Post</a>
-        <div class="version-text">v5-01-25</div> <!-- Version for NVE -->
+        <a href="https://www.mediafire.com/file/cyck9v2d0po2rcb/NVE_-_FiveM_Package-001.zip/file" target="_blank" class="version-text">Mediafire</a>
+        <a href="https://vag.gg/threads/nve-naturalvision-evolved-january-2025-fivem.30247/" target="_blank" class="version-text">Vag.gg Post</a>
+        <div class="version-text">v5-01-25</div>
       </div>
-
       <div>
         <a href="https://www.bozoteko.cc/quantv" class="glow icon-link" target="_blank"><b>QuantV Feb</b></a>
-        <a href="https://gofile.io/d/JgRZsA" target="_blank" class="version-text" style="color: white; font-weight: bold; text-shadow: 0 0 10px white; text-decoration: underline;">FiveM</a>
-        <a href="https://gofile.io/d/JgRZsA" target="_blank" class="version-text" style="color: white; font-weight: bold; text-shadow: 0 0 10px white; text-decoration: underline;">SP</a>
-        <div class="version-text">v2-02-25</div> <!-- Version for QuantV -->
-        </div>
-
-      <!-- Discord on the right -->
-      <div>
-        <a href="https://discord.gg/FPCFjc8m2U" class="glow icon-link" target="_blank">Discord</a>
+        <a href="https://gofile.io/d/JgRZsA" target="_blank" class="version-text">FiveM</a>
+        <a href="https://gofile.io/d/JgRZsA" target="_blank" class="version-text">SP</a>
+        <div class="version-text">v2-02-25</div>
       </div>
+      <div><a href="https://discord.gg/FPCFjc8m2U" class="glow icon-link" target="_blank">Discord</a></div>
     </div>
   </div>
+
+<!-- New Useful Button -->
+<div class="useful-container">
+  <a href="https://www.bozoteko.cc/useful" class="glow icon-link" target="_blank"><b>Useful Links</b></a>
+  <div>
+    <a href="https://www.bozoteko.cc/useful" class="version-text">Click here</a>
+  </div>
 </div>
+
 
 </body>
 </html>
