@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Useful</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
+<style>
+  body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Comic Neue', cursive;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rainbow-text {
+    font-size: 12em;
+    font-weight: bold;
+    animation: rainbow 12s infinite;
+    text-align: center;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes rainbow {
+    0% { color: #ff0000; }
+    16.67% { color: #ff7f00; }
+    33.33% { color: #ffff00; }
+    50% { color: #00ff00; }
+    66.67% { color: #0000ff; }
+    83.33% { color: #8b00ff; }
+    100% { color: #ff0000; }
+  }
+
+  .glow {
+    animation: glowing 12s ease-in-out infinite;
+  }
+
+  @keyframes glowing {
+    0% { text-shadow: 0 0 10px #ff0000; }
+    16.67% { text-shadow: 0 0 10px #ff7f00; }
+    33.33% { text-shadow: 0 0 10px #ffff00; }
+    50% { text-shadow: 0 0 10px #00ff00; }
+    66.67% { text-shadow: 0 0 10px #0000ff; }
+    83.33% { text-shadow: 0 0 10px #8b00ff; }
+    100% { text-shadow: 0 0 10px #ff0000; }
+  }
+
+  .icon-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .gofile-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px white;
+  }
+
+  .glowing-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1000px;
+  }
+
+  .links-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+  }
+
+  .version-text {
+    font-size: 0.9em;
+    color: white;
+    margin-top: 3px;
+    white-space: nowrap;
+  }
+
+.useful-container {
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+  /* Media query for mobile devices */
+  @media (max-width: 600px) {
+    .rainbow-text {
+      font-size: 4.5em;
+    }
+
+    .icon-link {
+      font-size: 1.2em;
+    }
+
+    .links-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links-container div {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="rainbow-text">Useful Links</div>
+
+  <div class="glowing-links">
+    <div class="links-container">
+      <div>
+        <a href="https://discord.com/channels/544361563939799040/1275281607808253992/1337776873270284310" class="glow icon-link" target="_blank"><b>QuantV Outdated Version Fix</b></a>
+        <a href="https://discord.com/channels/544361563939799040/1275281607808253992/1337776873270284310" target="_blank" class="version-text">Click here</a>
+      </div>
+      <div>
+        <a href="https://vag.gg/forums/fivem-graphics-pack/" class="glow icon-link" target="_blank"><b>‎ ‎ ‎ ‎ ‎ ‎ ‎VAG.GG‎‎ ‎ ‎ ‎ ‎ ‎ ‎ (Website)</b></a>
+        <a href="https://vag.gg/forums/fivem-graphics-pack/" target="_blank" class="version-text">Click here</a>
+      </div>
+      <div>
+        <a href="https://t.me/oleaks1" class="glow icon-link" target="_blank"><b>Original Gta Leaks (Telegram)</b></a>
+        <a href="https://t.me/oleaks1" target="_blank" class="version-text">Click here</a>
+      </div>
+      <div>
+        <a href="https://t.me/+TMa1fmrMtis4Yjky" class="glow icon-link" target="_blank"><b>RadiantLeaks (Telegram)</b></a>
+        <a href="https://t.me/+TMa1fmrMtis4Yjky" target="_blank" class="version-text">Click here</a>
+      </div>
+  </div>
+
+
+<!-- New Useful Button -->
+<div class="useful-container">
+  <a href="https://www.bozoteko.cc" class="glow icon-link" target="_blank"><b>Back to Downloads</b></a>
+  <div>
+    <a href="https://www.bozoteko.cc" class="version-text">Click here</a>
+  </div>
+</div>
+
+
+</body>
+</html>
