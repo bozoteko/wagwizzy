@@ -7,14 +7,14 @@
 
   <!-- Open Graph tags for Discord and other platforms -->
   <meta property="og:title" content="plodroid sucks at game dev lol" />
-  <meta property="og:description" content="hey! dis is plodroid's lame site where i admit i suck at making games lol. i use chatgpt cuz i cant code good." />
+  <meta property="og:description" content="hey! dis is plodroid's lame site where i admit i suck at making games lol i use chatgpt cuz i cant code good" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://media.discordapp.net/attachments/1340624443688620134/1378429331025559682/maxresdefault_1.jpg?ex=683c91da&is=683b405a&hm=0b5383b83eb8dd21d527e2a5bf010e0d148567c067f71fa88ca1155da23dcfb4&=&format=webp&width=967&height=544" />
 
   <!-- Twitter Card tags (also used by Discord) -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="plodroid sucks at game dev lol" />
-  <meta name="twitter:description" content="hey! dis is plodroid's lame site where i admit i suck at making games lol. i use chatgpt cuz i cant code good." />
+  <meta name="twitter:description" content="hey! dis is plodroid's lame site where i admit i suck at making games lol i use chatgpt cuz i cant code good" />
   <meta name="twitter:image" content="https://media.discordapp.net/attachments/1340624443688620134/1378429331025559682/maxresdefault_1.jpg?ex=683c91da&is=683b405a&hm=0b5383b83eb8dd21d527e2a5bf010e0d148567c067f71fa88ca1155da23dcfb4&=&format=webp&width=967&height=544" />
 
   <style>
@@ -31,10 +31,35 @@
       text-align: center;
       padding: 20px;
     }
-    h1, h2, h3 {
-      color: #ff4444;
-      text-shadow: 2px 2px #000;
+
+    @keyframes rainbowGlow {
+      0%, 100% { text-shadow: 2px 2px 8px #ff0000; box-shadow: 0 0 10px #ff000077; color: #ff4444; }
+      14% { text-shadow: 2px 2px 8px #ff7f00; box-shadow: 0 0 10px #ff7f0077; color: #ff7f00; }
+      28% { text-shadow: 2px 2px 8px #ffff00; box-shadow: 0 0 10px #ffff0077; color: #ffff00; }
+      42% { text-shadow: 2px 2px 8px #00ff00; box-shadow: 0 0 10px #00ff0077; color: #00ff00; }
+      56% { text-shadow: 2px 2px 8px #0000ff; box-shadow: 0 0 10px #0000ff77; color: #0000ff; }
+      70% { text-shadow: 2px 2px 8px #4b0082; box-shadow: 0 0 10px #4b008277; color: #4b0082; }
+      84% { text-shadow: 2px 2px 8px #8b00ff; box-shadow: 0 0 10px #8b00ff77; color: #8b00ff; }
     }
+
+    /* Animate red-colored headings */
+    h1, h2, h3 {
+      animation: rainbowGlow 7s linear infinite;
+    }
+
+    /* Animate section box shadows and text color */
+    section {
+      margin-bottom: 30px;
+      background: #222;
+      padding: 15px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: rainbowGlow 7s linear infinite;
+      color: inherit;
+    }
+
     nav {
       margin: 20px 0;
     }
@@ -47,16 +72,6 @@
     }
     nav a:hover {
       color: #88ff88;
-    }
-    section {
-      margin-bottom: 30px;
-      background: #222;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #ff444477;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
     }
     p {
       font-size: 1.1rem;
